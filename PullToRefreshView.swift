@@ -45,7 +45,7 @@ struct PullToRefreshHack: View {
             HStack {
                 Spacer()
                 if needRefresh {
-                    SpinnerVIewSUI(spinning: true, bgOpacity: 0.0, message: "", style: .medium, bgColor: .clear)
+                    ActivityIndicator(isAnimating: .constant(true), style: .medium) //or put any 'refreshing' indicator of choice here
                 } else {
                     VStack{
                         Image(systemName: "arrow.down")
